@@ -19,6 +19,6 @@ the [`httpd` directory
 #### The Web Servers buildpack is only compatible with the following builder:
 - [Paketo Full Builder](https://github.com/paketo-buildpacks/full-builder) (NGINX and HTTPD)
 - [Paketo Base Builder](https://github.com/paketo-buildpacks/base-builder) (NGINX only)
-**Note** that only HTTPD workloads are compatible with the Full Builder ONLY.
+**Note** that HTTPD workloads are compatible with the Full Builder ONLY.
 
 Check out the [Web Servers Paketo Buildpack docs](https://paketo.io/docs/howto/web-servers/) for more information.
