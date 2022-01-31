@@ -21,4 +21,7 @@ the [`httpd` directory
 - [Paketo Base Builder](https://github.com/paketo-buildpacks/base-builder) (NGINX only)
 **Note** that HTTPD workloads are compatible with the Full Builder ONLY.
 
+This buildpack also includes the following utility buildpacks:
+- [Procfile CNB](https://github.com/paketo-buildpacks/procfile)
+
 Check out the [Web Servers Paketo Buildpack docs](https://paketo.io/docs/howto/web-servers/) for more information.

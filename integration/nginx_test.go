@@ -2,8 +2,6 @@ package integration_test
 
 import (
 	"fmt"
-	"io/ioutil"
-	"net/http"
 	"os"
 	"path/filepath"
 	"testing"
@@ -63,26 +61,46 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), logs.String())
 
+			Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("HTTP Server Buildpack")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Procfile Buildpack")))
+
 			container, err = docker.Container.Run.
 				WithEnv(map[string]string{"PORT": "8080"}).
 				WithPublish("8080").
 				Execute(image.ID)
 			Expect(err).NotTo(HaveOccurred())
+			Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080).WithEndpoint("/index.html"))
+		})
 
-			Eventually(container).Should(BeAvailable())
+		context("when the app has a Procfile", func() {
+			it.Before(func() {
+				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: nginx -p $PWD -c nginx.conf"), os.ModePerm)).To(Succeed())
+			})
+			it.After(func() {
+				Expect(os.Remove(filepath.Join(source, "Procfile"))).To(Succeed())
+			})
 
-			response, err := http.Get(fmt.Sprintf("http://localhost:%s/index.html", container.HostPort("8080")))
-			Expect(err).NotTo(HaveOccurred())
-			Expect(response.StatusCode).To(Equal(http.StatusOK))
-			defer response.Body.Close()
+			it("creates a working OCI image and uses the Procfile start command", func() {
+				var err error
+				var logs fmt.Stringer
+				image, logs, err = pack.WithNoColor().Build.
+					WithBuildpacks(webServersBuildpack).
+					WithPullPolicy("never").
+					Execute(name, source)
+				Expect(err).NotTo(HaveOccurred(), logs.String())
 
-			content, err := ioutil.ReadAll(response.Body)
-			Expect(err).NotTo(HaveOccurred())
-			Expect(string(content)).To(ContainSubstring("<title>NGINX App</title>"))
-			Expect(string(content)).To(ContainSubstring("<body>Hello World!</body>"))
+				Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Procfile Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("web: nginx -p $PWD -c nginx.conf")))
 
-			Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
-			Expect(logs).NotTo(ContainLines(ContainSubstring("HTTP Server Buildpack")))
+				container, err = docker.Container.Run.
+					WithEnv(map[string]string{"PORT": "8080"}).
+					WithPublish("8080").
+					Execute(image.ID)
+				Expect(err).NotTo(HaveOccurred())
+				Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080))
+			})
 		})
 	})
 }
