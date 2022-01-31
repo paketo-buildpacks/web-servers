@@ -7,3 +7,6 @@
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/httpd:0.2.1"
+
+[[dependencies]]
+  uri = "docker://gcr.io/paketo-buildpacks/procfile:5.0.2"

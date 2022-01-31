@@ -2,8 +2,6 @@ package integration_test
 
 import (
 	"fmt"
-	"io/ioutil"
-	"net/http"
 	"os"
 	"path/filepath"
 	"testing"
@@ -63,6 +61,9 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), logs.String())
 
+			Expect(logs).To(ContainLines(ContainSubstring("HTTP Server Buildpack")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+
 			container, err = docker.Container.Run.
 				WithEnv(map[string]string{"PORT": "8080"}).
 				WithPublish("8080").
@@ -70,19 +71,38 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 			Expect(err).NotTo(HaveOccurred())
 
 			Eventually(container).Should(BeAvailable())
+			Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080))
+		})
 
-			response, err := http.Get(fmt.Sprintf("http://localhost:%s", container.HostPort("8080")))
-			Expect(err).NotTo(HaveOccurred())
-			Expect(response.StatusCode).To(Equal(http.StatusOK))
-			defer response.Body.Close()
+		context("when the app has a Procfile", func() {
+			it.Before(func() {
+				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: httpd -f /workspace/httpd.conf -k start -DFOREGROUND"), os.ModePerm)).To(Succeed())
+			})
+			it.After(func() {
+				Expect(os.Remove(filepath.Join(source, "Procfile"))).To(Succeed())
+			})
 
-			content, err := ioutil.ReadAll(response.Body)
-			Expect(err).NotTo(HaveOccurred())
-			Expect(string(content)).To(ContainSubstring("<title>HTTPD App</title>"))
-			Expect(string(content)).To(ContainSubstring("<body>Hello World!</body>"))
+			it("creates a working OCI image and uses the Procfile start command", func() {
+				var err error
+				var logs fmt.Stringer
+				image, logs, err = pack.WithNoColor().Build.
+					WithBuildpacks(webServersBuildpack).
+					WithPullPolicy("never").
+					Execute(name, source)
+				Expect(err).NotTo(HaveOccurred(), logs.String())
 
-			Expect(logs).To(ContainLines(ContainSubstring("HTTP Server Buildpack")))
-			Expect(logs).NotTo(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("HTTP Server Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Procfile Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("web: httpd -f /workspace/httpd.conf -k start -DFOREGROUND")))
+
+				container, err = docker.Container.Run.
+					WithEnv(map[string]string{"PORT": "8080"}).
+					WithPublish("8080").
+					WithPublishAll().
+					Execute(image.ID)
+				Expect(err).NotTo(HaveOccurred())
+				Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080))
+			})
 		})
 	})
 }
