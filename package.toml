@@ -1,0 +1,9 @@
+
+[buildpack]
+  uri = "build/buildpack.tgz"
+
+[[dependencies]]
+  uri = "docker://gcr.io/paketo-buildpacks/nginx:0.5.2"
+
+[[dependencies]]
+  uri = "docker://gcr.io/paketo-buildpacks/httpd:0.2.1"
