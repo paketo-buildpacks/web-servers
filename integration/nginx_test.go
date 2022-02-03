@@ -1,7 +1,11 @@
 package integration_test
 
 import (
+	"crypto/tls"
+	"crypto/x509"
 	"fmt"
+	"io/ioutil"
+	"net/http"
 	"os"
 	"path/filepath"
 	"testing"
@@ -64,6 +68,9 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 			Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
 			Expect(logs).NotTo(ContainLines(ContainSubstring("HTTP Server Buildpack")))
 			Expect(logs).NotTo(ContainLines(ContainSubstring("Procfile Buildpack")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Environment Variables Buildpack")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Image Labels Buildpack")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Watchexec Buildpack")))
 
 			container, err = docker.Container.Run.
 				WithEnv(map[string]string{"PORT": "8080"}).
@@ -73,7 +80,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 			Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080).WithEndpoint("/index.html"))
 		})
 
-		context("when the app has a Procfile", func() {
+		context("when using optional utility buildpacks", func() {
 			it.Before(func() {
 				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: nginx -p $PWD -c nginx.conf"), os.ModePerm)).To(Succeed())
 			})
@@ -87,12 +94,27 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 				image, logs, err = pack.WithNoColor().Build.
 					WithBuildpacks(webServersBuildpack).
 					WithPullPolicy("never").
+					WithEnv(map[string]string{
+						"BPE_SOME_VARIABLE":      "some-value",
+						"BP_IMAGE_LABELS":        "some-label=some-value",
+						"BP_LIVE_RELOAD_ENABLED": "true",
+					}).
 					Execute(name, source)
+
 				Expect(err).NotTo(HaveOccurred(), logs.String())
 
 				Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
 				Expect(logs).To(ContainLines(ContainSubstring("Procfile Buildpack")))
 				Expect(logs).To(ContainLines(ContainSubstring("web: nginx -p $PWD -c nginx.conf")))
+				Expect(logs).To(ContainLines(ContainSubstring("Environment Variables Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Image Labels Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
+
+				Expect(image.Buildpacks[4].Key).To(Equal("paketo-buildpacks/environment-variables"))
+				Expect(image.Buildpacks[4].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
+				Expect(image.Labels["some-label"]).To(Equal("some-value"))
+
+				Expect(image.Buildpacks[5].Key).To(Equal("paketo-buildpacks/image-labels"))
 
 				container, err = docker.Container.Run.
 					WithEnv(map[string]string{"PORT": "8080"}).
@@ -100,6 +122,83 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 					Execute(image.ID)
 				Expect(err).NotTo(HaveOccurred())
 				Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080))
+			})
+		})
+
+		context("when using CA certificates", func() {
+			var client *http.Client
+
+			it.Before(func() {
+				var err error
+				source, err = occam.Source(filepath.Join("testdata", "ca_cert_apps"))
+				Expect(err).NotTo(HaveOccurred())
+
+				caCert, err := ioutil.ReadFile(fmt.Sprintf("%s/client-certs/ca.pem", source))
+				Expect(err).ToNot(HaveOccurred())
+
+				caCertPool := x509.NewCertPool()
+				caCertPool.AppendCertsFromPEM(caCert)
+
+				cert, err := tls.LoadX509KeyPair(fmt.Sprintf("%s/client-certs/cert.pem", source), fmt.Sprintf("%s/client-certs/key.pem", source))
+				Expect(err).ToNot(HaveOccurred())
+
+				client = &http.Client{
+					Transport: &http.Transport{
+						TLSClientConfig: &tls.Config{
+							RootCAs:      caCertPool,
+							Certificates: []tls.Certificate{cert},
+							MinVersion:   tls.VersionTLS12,
+						},
+					},
+				}
+			})
+
+			it("builds a working OCI image and uses a client-side CA cert for requests", func() {
+				var err error
+				var logs fmt.Stringer
+				image, logs, err = pack.WithNoColor().Build.
+					WithBuildpacks(webServersBuildpack).
+					WithPullPolicy("never").
+					Execute(name, filepath.Join(source, "nginx"))
+				Expect(err).NotTo(HaveOccurred(), logs.String())
+
+				Expect(logs).To(ContainLines(ContainSubstring("CA Certificates Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+
+				container, err = docker.Container.Run.
+					WithEnv(map[string]string{
+						"PORT":                 "8080",
+						"SERVICE_BINDING_ROOT": "/bindings",
+					}).
+					WithPublish("8080").
+					WithVolumes(fmt.Sprintf("%s/binding:/bindings/ca-certificates", source)).
+					Execute(image.ID)
+				Expect(err).NotTo(HaveOccurred())
+
+				Eventually(func() string {
+					cLogs, err := docker.Container.Logs.Execute(container.ID)
+					Expect(err).NotTo(HaveOccurred())
+					return cLogs.String()
+				}).Should(
+					ContainSubstring("Added 1 additional CA certificate(s) to system truststore"),
+				)
+
+				request, err := http.NewRequest("GET", fmt.Sprintf("https://localhost:%s/index.html", container.HostPort("8080")), nil)
+				Expect(err).NotTo(HaveOccurred())
+
+				var response *http.Response
+				Eventually(func() error {
+					var err error
+					response, err = client.Do(request)
+					return err
+				}).Should(BeNil())
+				defer response.Body.Close()
+
+				Expect(response.StatusCode).To(Equal(http.StatusOK))
+
+				content, err := ioutil.ReadAll(response.Body)
+				Expect(err).NotTo(HaveOccurred())
+				Expect(string(content)).To(ContainSubstring("<body>Hello World!</body>"))
 			})
 		})
 	})
