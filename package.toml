@@ -12,16 +12,16 @@
   uri = "docker://gcr.io/paketo-buildpacks/npm-install:0.8.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/httpd:0.2.1"
+  uri = "docker://gcr.io/paketo-buildpacks/httpd:0.3.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/nginx:0.5.3"
-
-[[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/procfile:5.0.3"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/yarn:0.6.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/yarn-install:0.8.0"
+  
+[[dependencies]]
+  uri = "docker://gcr.io/paketo-buildpacks/procfile:5.1.0"
