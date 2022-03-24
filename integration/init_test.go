@@ -35,5 +35,7 @@ func TestIntegration(t *testing.T) {
 	suite := spec.New("Integration", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("HTTPD", testHttpd)
 	suite("NGINX", testNginx)
+	suite("NPM Frontend", testNPMFrontend)
+	suite("Yarn Frontend", testYarnFrontend)
 	suite.Run(t)
 }

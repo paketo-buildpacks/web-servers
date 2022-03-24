@@ -15,6 +15,86 @@ api = "0.6"
 [[order]]
 
   [[order.group]]
+    id = "paketo-buildpacks/node-engine"
+    version = "0.12.1"
+
+  [[order.group]]
+    id = "paketo-buildpacks/yarn"
+    version = "0.6.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/yarn-install"
+    version = "0.8.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-run-script"
+    version = "0.3.2"
+
+  [[order.group]]
+    id = "paketo-buildpacks/nginx"
+    version = "0.5.3"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-engine"
+    version = "0.12.1"
+
+  [[order.group]]
+    id = "paketo-buildpacks/npm-install"
+    version = "0.8.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-run-script"
+    version = "0.3.2"
+
+  [[order.group]]
+    id = "paketo-buildpacks/nginx"
+    version = "0.5.3"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-engine"
+    version = "0.12.1"
+
+  [[order.group]]
+    id = "paketo-buildpacks/yarn"
+    version = "0.6.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/yarn-install"
+    version = "0.8.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-run-script"
+    version = "0.3.2"
+
+  [[order.group]]
+    id = "paketo-buildpacks/httpd"
+    version = "0.3.0"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-engine"
+    version = "0.12.1"
+
+  [[order.group]]
+    id = "paketo-buildpacks/npm-install"
+    version = "0.8.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-run-script"
+    version = "0.3.2"
+
+  [[order.group]]
+    id = "paketo-buildpacks/httpd"
+    version = "0.3.0"
+
+[[order]]
+
+  [[order.group]]
     id = "paketo-buildpacks/nginx"
     version = "0.5.3"
 
