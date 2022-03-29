@@ -32,7 +32,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.5.3"
+    version = "0.6.0"
 
 [[order]]
 
@@ -50,7 +50,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.5.3"
+    version = "0.6.0"
 
 [[order]]
 
@@ -96,7 +96,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.5.3"
+    version = "0.6.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
