@@ -95,6 +95,16 @@ api = "0.6"
 [[order]]
 
   [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.3.5"
+
+  [[order.group]]
     id = "paketo-buildpacks/nginx"
     version = "0.5.3"
 
@@ -103,7 +113,27 @@ api = "0.6"
     optional = true
     version = "5.1.0"
 
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.1.0"
+
 [[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.3.5"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -113,3 +143,13 @@ api = "0.6"
     id = "paketo-buildpacks/procfile"
     optional = true
     version = "5.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.1.0"
