@@ -15,7 +15,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/httpd:0.3.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/nginx:0.5.3"
+  uri = "docker://gcr.io/paketo-buildpacks/nginx:0.6.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/yarn:0.6.0"
