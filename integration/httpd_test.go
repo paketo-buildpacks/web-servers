@@ -128,16 +128,16 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 				var err error
 				name, err = occam.RandomName()
 				Expect(err).NotTo(HaveOccurred())
-				source, err = occam.Source(filepath.Join("testdata", "ca_cert_httpd"))
+				source, err = occam.Source(filepath.Join("testdata", "ca_cert_apps"))
 				Expect(err).NotTo(HaveOccurred())
 
-				caCert, err := ioutil.ReadFile(fmt.Sprintf("%s/app/certs/ca.pem", source))
+				caCert, err := ioutil.ReadFile(filepath.Join(source, "client_certs", "ca.pem"))
 				Expect(err).ToNot(HaveOccurred())
 
 				caCertPool := x509.NewCertPool()
 				caCertPool.AppendCertsFromPEM(caCert)
 
-				cert, err := tls.LoadX509KeyPair(fmt.Sprintf("%s/app/certs/cert.pem", source), fmt.Sprintf("%s/app/certs/key.pem", source))
+				cert, err := tls.LoadX509KeyPair(filepath.Join(source, "client_certs", "cert.pem"), filepath.Join(source, "client_certs", "key.pem"))
 				Expect(err).ToNot(HaveOccurred())
 
 				client = &http.Client{
@@ -157,7 +157,7 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 				image, logs, err = pack.WithNoColor().Build.
 					WithBuildpacks(webServersBuildpack).
 					WithPullPolicy("never").
-					Execute(name, filepath.Join(source, "app"))
+					Execute(name, filepath.Join(source, "httpd"))
 				Expect(err).NotTo(HaveOccurred())
 
 				Expect(logs).To(ContainLines(ContainSubstring("CA Certificates Buildpack")))

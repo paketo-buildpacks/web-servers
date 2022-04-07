@@ -15,6 +15,16 @@ api = "0.6"
 [[order]]
 
   [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.3.5"
+
+  [[order.group]]
     id = "paketo-buildpacks/node-engine"
     version = "0.12.3"
 
@@ -34,7 +44,27 @@ api = "0.6"
     id = "paketo-buildpacks/nginx"
     version = "0.6.0"
 
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.1.0"
+
 [[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.3.5"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -52,7 +82,27 @@ api = "0.6"
     id = "paketo-buildpacks/nginx"
     version = "0.6.0"
 
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.1.0"
+
 [[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.3.5"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -74,7 +124,27 @@ api = "0.6"
     id = "paketo-buildpacks/httpd"
     version = "0.3.0"
 
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.1.0"
+
 [[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.3.5"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -91,6 +161,16 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/httpd"
     version = "0.3.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.1.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.1.0"
 
 [[order]]
 

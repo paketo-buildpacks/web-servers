@@ -124,16 +124,18 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 
 			it.Before(func() {
 				var err error
-				source, err = occam.Source(filepath.Join("testdata", "ca_cert_nginx"))
+				name, err = occam.RandomName()
+				Expect(err).NotTo(HaveOccurred())
+				source, err = occam.Source(filepath.Join("testdata", "ca_cert_apps"))
 				Expect(err).NotTo(HaveOccurred())
 
-				caCert, err := ioutil.ReadFile(fmt.Sprintf("%s/client-certs/ca.pem", source))
+				caCert, err := ioutil.ReadFile(filepath.Join(source, "client_certs", "ca.pem"))
 				Expect(err).ToNot(HaveOccurred())
 
 				caCertPool := x509.NewCertPool()
 				caCertPool.AppendCertsFromPEM(caCert)
 
-				cert, err := tls.LoadX509KeyPair(fmt.Sprintf("%s/client-certs/cert.pem", source), fmt.Sprintf("%s/client-certs/key.pem", source))
+				cert, err := tls.LoadX509KeyPair(filepath.Join(source, "client_certs", "cert.pem"), filepath.Join(source, "client_certs", "key.pem"))
 				Expect(err).ToNot(HaveOccurred())
 
 				client = &http.Client{
