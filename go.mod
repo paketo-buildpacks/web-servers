@@ -1,4 +1,4 @@
-module github.com/paketo-community/web-servers
+module github.com/paketo-buildpacks/web-servers
 
 go 1.16
 
