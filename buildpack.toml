@@ -1,13 +1,13 @@
 api = "0.6"
 
 [buildpack]
-  homepage = "https://github.com/paketo-community/web-servers"
-  id = "paketo-community/web-server"
+  homepage = "https://github.com/paketo-buildpacks/web-servers"
+  id = "paketo-buildpacks/web-server"
   name = "Paketo Web Servers Buildpack"
 
   [[buildpack.licenses]]
     type = "Apache-2.0"
-    uri = "https://github.com/paketo-community/web-servers/blob/main/LICENSE"
+    uri = "https://github.com/paketo-buildpacks/web-servers/blob/main/LICENSE"
 
 [metadata]
   include-files = ["buildpack.toml"]
