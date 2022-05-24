@@ -10,6 +10,7 @@ enable the use of web servers. These buildpacks include:
 - [Yarn CNB](https://github.com/paketo-buildpacks/yarn)
 - [Yarn Install CNB](https://github.com/paketo-buildpacks/yarn-install)
 - [NPM Install CNB](https://github.com/paketo-buildpacks/npm-install)
+- [Node Run Script](https://github.com/paketo-buildpacks/node-run-script)
 
 The buildpack supports building applications that leverage NGINX or HTTPD web
 servers as well as JavaScript Frontend apps. Usage examples can be found in the
