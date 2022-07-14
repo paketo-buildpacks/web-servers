@@ -42,7 +42,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.8.0"
+    version = "0.9.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -72,7 +72,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "0.10.0"
+    version = "0.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
@@ -80,7 +80,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.8.0"
+    version = "0.9.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -152,7 +152,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "0.10.0"
+    version = "0.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
@@ -186,7 +186,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.8.0"
+    version = "0.9.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
