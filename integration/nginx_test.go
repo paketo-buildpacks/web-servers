@@ -79,7 +79,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 
 		context("when using optional utility buildpacks", func() {
 			it.Before(func() {
-				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: nginx -p $PWD -c nginx.conf"), os.ModePerm)).To(Succeed())
+				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: nginx -p $PWD -c nginx.conf -g 'pid /tmp/server.pid;'"), os.ModePerm)).To(Succeed())
 			})
 			it.After(func() {
 				Expect(os.Remove(filepath.Join(source, "Procfile"))).To(Succeed())
@@ -104,7 +104,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 				Expect(logs).To(ContainLines(ContainSubstring("Environment Variables Buildpack")))
 				Expect(logs).To(ContainLines(ContainSubstring("Image Labels Buildpack")))
 				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("web: nginx -p $PWD -c nginx.conf")))
+				Expect(logs).To(ContainLines(ContainSubstring("web: nginx -p $PWD -c nginx.conf -g 'pid /tmp/server.pid;'")))
 
 				Expect(image.Buildpacks[4].Key).To(Equal("paketo-buildpacks/environment-variables"))
 				Expect(image.Buildpacks[4].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
@@ -115,7 +115,11 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 					WithPublish("8080").
 					Execute(image.ID)
 				Expect(err).NotTo(HaveOccurred())
-				Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080))
+
+				Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080), func() string {
+					logs, _ := docker.Container.Logs.Execute(container.ID)
+					return logs.String()
+				})
 			})
 		})
 
