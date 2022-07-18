@@ -173,14 +173,6 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 					Execute(image.ID)
 				Expect(err).NotTo(HaveOccurred())
 
-				Eventually(func() string {
-					cLogs, err := docker.Container.Logs.Execute(container.ID)
-					Expect(err).NotTo(HaveOccurred())
-					return cLogs.String()
-				}).Should(
-					ContainSubstring("Added 1 additional CA certificate(s) to system truststore"),
-				)
-
 				request, err := http.NewRequest("GET", fmt.Sprintf("https://localhost:%s", container.HostPort("8080")), nil)
 				Expect(err).NotTo(HaveOccurred())
 
@@ -197,6 +189,10 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 				content, err := ioutil.ReadAll(response.Body)
 				Expect(err).NotTo(HaveOccurred())
 				Expect(string(content)).To(ContainSubstring("<body>Hello World!</body>"))
+
+				logs, err = docker.Container.Logs.Execute(container.ID)
+				Expect(err).NotTo(HaveOccurred())
+				Expect(logs).To(ContainLines(ContainSubstring("Added 1 additional CA certificate(s) to system truststore")))
 			})
 		})
 	})
