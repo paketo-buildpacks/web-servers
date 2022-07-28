@@ -72,7 +72,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "0.10.1"
+    version = "0.10.2"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
@@ -152,7 +152,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "0.10.1"
+    version = "0.10.2"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
