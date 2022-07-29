@@ -17,12 +17,12 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.2.4"
+    version = "3.2.5"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.5.2"
+    version = "2.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -47,24 +47,24 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.2.4"
+    version = "3.2.5"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.5.2"
+    version = "2.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -85,24 +85,24 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.2.4"
+    version = "3.2.5"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.5.2"
+    version = "2.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -127,24 +127,24 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.2.4"
+    version = "3.2.5"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.5.2"
+    version = "2.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -165,24 +165,24 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.2.4"
+    version = "3.2.5"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.5.2"
+    version = "2.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -191,29 +191,29 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.2.0"
+    version = "5.2.1"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
 [[order]]
 
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.2.4"
+    version = "3.2.5"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.5.2"
+    version = "2.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -222,14 +222,14 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.2.0"
+    version = "5.2.1"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.1.2"
+    version = "4.1.3"
