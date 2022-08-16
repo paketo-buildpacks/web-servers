@@ -6,10 +6,10 @@
   uri = "urn:cnb:registry:paketo-buildpacks/node-engine@0.15.0"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@0.4.1"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@0.4.2"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/npm-install@0.10.3"
+  uri = "urn:cnb:registry:paketo-buildpacks/npm-install@0.10.4"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/httpd@0.5.0"
@@ -18,10 +18,10 @@
   uri = "urn:cnb:registry:paketo-buildpacks/nginx@0.9.0"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn@0.8.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/yarn@0.8.1"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@0.10.2"
+  uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@0.10.3"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/procfile@5.2.1"
