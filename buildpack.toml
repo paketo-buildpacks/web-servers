@@ -3,7 +3,7 @@ api = "0.6"
 [buildpack]
   homepage = "https://github.com/paketo-buildpacks/web-servers"
   id = "paketo-buildpacks/web-servers"
-  name = "Paketo Web Servers Buildpack"
+  name = "Paketo Buildpack for Web Servers"
 
   [[buildpack.licenses]]
     type = "Apache-2.0"
