@@ -66,13 +66,14 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), logs.String())
 
-			Expect(logs).To(ContainLines(ContainSubstring("Node Engine Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Yarn Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Yarn Install Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Node Run Script Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
-			Expect(logs).NotTo(ContainLines(ContainSubstring("HTTP Server Buildpack")))
-			Expect(logs).NotTo(ContainLines(ContainSubstring("Procfile Buildpack")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Engine")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn Install")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Run Script")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
+
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
 
 			container, err = docker.Container.Run.
 				WithEnv(map[string]string{"PORT": "8080"}).
@@ -98,16 +99,17 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 					Execute(name, source)
 				Expect(err).NotTo(HaveOccurred(), logs.String())
 
-				Expect(logs).To(ContainLines(ContainSubstring("Node Engine Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Yarn Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Yarn Install Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Node Run Script Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
-				Expect(logs).NotTo(ContainLines(ContainSubstring("HTTP Server Buildpack")))
-				Expect(logs).NotTo(ContainLines(ContainSubstring("Procfile Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Environment Variables Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Image Labels Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Engine")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn Install")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Run Script")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
 				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
+
+				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
+				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
 
 				Expect(image.Buildpacks[7].Key).To(Equal("paketo-buildpacks/environment-variables"))
 				Expect(image.Buildpacks[7].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
@@ -162,8 +164,8 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 					Execute(name, filepath.Join(source, "yarn-nginx-javascript-frontend"))
 				Expect(err).NotTo(HaveOccurred())
 
-				Expect(logs).To(ContainLines(ContainSubstring("CA Certificates Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for CA Certificates")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
 
 				container, err = docker.Container.Run.
 					WithPublish("8080").
@@ -238,13 +240,14 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), logs.String())
 
-			Expect(logs).To(ContainLines(ContainSubstring("Node Engine Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Yarn Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Yarn Install Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("Node Run Script Buildpack")))
-			Expect(logs).NotTo(ContainLines(ContainSubstring("Nginx Server Buildpack")))
-			Expect(logs).To(ContainLines(ContainSubstring("HTTP Server Buildpack")))
-			Expect(logs).NotTo(ContainLines(ContainSubstring("Procfile Buildpack")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Engine")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn Install")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Run Script")))
+			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
+
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
+			Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
 
 			container, err = docker.Container.Run.
 				WithEnv(map[string]string{"PORT": "8080"}).
@@ -270,16 +273,17 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 					Execute(name, source)
 				Expect(err).NotTo(HaveOccurred(), logs.String())
 
-				Expect(logs).To(ContainLines(ContainSubstring("Node Engine Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Yarn Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Yarn Install Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Node Run Script Buildpack")))
-				Expect(logs).NotTo(ContainLines(ContainSubstring("Nginx Server Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("HTTP Server Buildpack")))
-				Expect(logs).NotTo(ContainLines(ContainSubstring("Procfile Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Environment Variables Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("Image Labels Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Engine")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn Install")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Run Script")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
 				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
+
+				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
+				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
 
 				Expect(image.Buildpacks[7].Key).To(Equal("paketo-buildpacks/environment-variables"))
 				Expect(image.Buildpacks[7].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
@@ -334,8 +338,8 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 					Execute(name, filepath.Join(source, "yarn-httpd-javascript-frontend"))
 				Expect(err).NotTo(HaveOccurred())
 
-				Expect(logs).To(ContainLines(ContainSubstring("CA Certificates Buildpack")))
-				Expect(logs).To(ContainLines(ContainSubstring("HTTP Server Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for CA Certificates")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
 
 				container, err = docker.Container.Run.
 					WithPublish("8080").
