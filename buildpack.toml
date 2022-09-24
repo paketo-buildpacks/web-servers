@@ -26,52 +26,14 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "0.16.0"
+    version = "0.17.0"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "0.8.2"
+    version = "0.8.3"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
-    version = "0.10.4"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-run-script"
-    version = "0.4.3"
-
-  [[order.group]]
-    id = "paketo-buildpacks/nginx"
-    version = "0.10.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/environment-variables"
-    optional = true
-    version = "4.3.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/image-labels"
-    optional = true
-    version = "4.3.0"
-
-[[order]]
-
-  [[order.group]]
-    id = "paketo-buildpacks/ca-certificates"
-    optional = true
-    version = "3.4.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/watchexec"
-    optional = true
-    version = "2.7.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-engine"
-    version = "0.16.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/npm-install"
     version = "0.10.5"
 
   [[order.group]]
@@ -80,7 +42,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.10.0"
+    version = "0.11.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -106,23 +68,19 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "0.16.0"
+    version = "0.17.0"
 
   [[order.group]]
-    id = "paketo-buildpacks/yarn"
-    version = "0.8.2"
-
-  [[order.group]]
-    id = "paketo-buildpacks/yarn-install"
-    version = "0.10.4"
+    id = "paketo-buildpacks/npm-install"
+    version = "0.10.6"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
     version = "0.4.3"
 
   [[order.group]]
-    id = "paketo-buildpacks/httpd"
-    version = "0.5.1"
+    id = "paketo-buildpacks/nginx"
+    version = "0.11.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -148,10 +106,14 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "0.16.0"
+    version = "0.17.0"
 
   [[order.group]]
-    id = "paketo-buildpacks/npm-install"
+    id = "paketo-buildpacks/yarn"
+    version = "0.8.3"
+
+  [[order.group]]
+    id = "paketo-buildpacks/yarn-install"
     version = "0.10.5"
 
   [[order.group]]
@@ -160,7 +122,45 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.5.1"
+    version = "0.6.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/environment-variables"
+    optional = true
+    version = "4.3.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/image-labels"
+    optional = true
+    version = "4.3.0"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/ca-certificates"
+    optional = true
+    version = "3.4.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/watchexec"
+    optional = true
+    version = "2.7.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-engine"
+    version = "0.17.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/npm-install"
+    version = "0.10.6"
+
+  [[order.group]]
+    id = "paketo-buildpacks/node-run-script"
+    version = "0.4.3"
+
+  [[order.group]]
+    id = "paketo-buildpacks/httpd"
+    version = "0.6.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -186,7 +186,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.10.0"
+    version = "0.11.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -217,7 +217,7 @@ api = "0.6"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.5.1"
+    version = "0.6.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
