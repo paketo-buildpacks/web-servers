@@ -106,7 +106,7 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
-				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Watchexec")))
 
 				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
 				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
@@ -280,7 +280,7 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
-				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Watchexec")))
 
 				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
 				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
