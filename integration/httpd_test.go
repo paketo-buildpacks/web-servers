@@ -105,7 +105,7 @@ func testHttpd(t *testing.T, context spec.G, it spec.S) {
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Procfile")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
-				Expect(logs).To(ContainLines(ContainSubstring("Watchexec Buildpack")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Watchexec")))
 
 				Expect(logs).To(ContainLines(ContainSubstring("web: httpd -f /workspace/httpd.conf -k start -DFOREGROUND")))
 
