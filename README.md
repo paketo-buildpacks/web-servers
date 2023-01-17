@@ -19,9 +19,10 @@ the [`web-servers`
 directory](https://github.com/paketo-buildpacks/samples/tree/main/web-servers).
 
 #### The Web Servers buildpack is only compatible with the following builder:
-- [Paketo Full Builder](https://github.com/paketo-buildpacks/full-builder) (NGINX and HTTPD)
-- [Paketo Base Builder](https://github.com/paketo-buildpacks/base-builder) (NGINX only)
-**Note** that HTTPD workloads are compatible with the Full Builder ONLY.
+- [Paketo Jammy Full Builder](https://github.com/paketo-buildpacks/builder-jammy-full)
+- [Paketo Jammy Base Builder](https://github.com/paketo-buildpacks/builder-jammy-base)
+- [Paketo Bionic Full Builder](https://github.com/paketo-buildpacks/full-builder)
+- [Paketo Bionic Base Builder](https://github.com/paketo-buildpacks/base-builder)
 
 This buildpack also includes the following utility buildpacks:
 - [Procfile CNB](https://github.com/paketo-buildpacks/procfile)
