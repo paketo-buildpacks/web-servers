@@ -84,6 +84,13 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 		})
 
 		context("when using optional utility buildpacks", func() {
+			it.Before(func() {
+				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: nginx -p $PWD -c nginx.conf -g 'pid /tmp/server.pid;'"), os.ModePerm)).To(Succeed())
+			})
+			it.After(func() {
+				Expect(os.Remove(filepath.Join(source, "Procfile"))).To(Succeed())
+			})
+
 			it("creates a working OCI image and uses utility buildpacks", func() {
 				var err error
 				var logs fmt.Stringer
@@ -104,15 +111,15 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn Install")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Run Script")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Procfile")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Watchexec")))
 
 				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
-				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
 
-				Expect(image.Buildpacks[7].Key).To(Equal("paketo-buildpacks/environment-variables"))
-				Expect(image.Buildpacks[7].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
+				Expect(image.Buildpacks[8].Key).To(Equal("paketo-buildpacks/environment-variables"))
+				Expect(image.Buildpacks[8].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
 				Expect(image.Labels["some-label"]).To(Equal("some-value"))
 
 				container, err = docker.Container.Run.
@@ -258,6 +265,13 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 		})
 
 		context("when using optional utility buildpacks", func() {
+			it.Before(func() {
+				Expect(os.WriteFile(filepath.Join(source, "Procfile"), []byte("web: httpd -f /workspace/httpd.conf -k start -DFOREGROUND"), os.ModePerm)).To(Succeed())
+			})
+			it.After(func() {
+				Expect(os.Remove(filepath.Join(source, "Procfile"))).To(Succeed())
+			})
+
 			it("creates a working OCI image and uses utility buildpacks", func() {
 				var err error
 				var logs fmt.Stringer
@@ -278,15 +292,15 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Yarn Install")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Node Run Script")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Apache HTTP Server")))
+				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Procfile")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Environment Variables")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Image Labels")))
 				Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Watchexec")))
 
 				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
-				Expect(logs).NotTo(ContainLines(ContainSubstring("Buildpack for Procfile")))
 
-				Expect(image.Buildpacks[7].Key).To(Equal("paketo-buildpacks/environment-variables"))
-				Expect(image.Buildpacks[7].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
+				Expect(image.Buildpacks[8].Key).To(Equal("paketo-buildpacks/environment-variables"))
+				Expect(image.Buildpacks[8].Layers["environment-variables"].Metadata["variables"]).To(Equal(map[string]interface{}{"SOME_VARIABLE": "some-value"}))
 				Expect(image.Labels["some-label"]).To(Equal("some-value"))
 
 				container, err = docker.Container.Run.
