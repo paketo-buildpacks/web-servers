@@ -45,6 +45,11 @@ api = "0.7"
     version = "0.12.2"
 
   [[order.group]]
+    id = "paketo-buildpacks/procfile"
+    optional = true
+    version = "5.6.0"
+
+  [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
     version = "4.5.0"
@@ -81,6 +86,11 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/nginx"
     version = "0.12.2"
+
+  [[order.group]]
+    id = "paketo-buildpacks/procfile"
+    optional = true
+    version = "5.6.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -125,6 +135,11 @@ api = "0.7"
     version = "0.7.3"
 
   [[order.group]]
+    id = "paketo-buildpacks/procfile"
+    optional = true
+    version = "5.6.0"
+
+  [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
     version = "4.5.0"
@@ -161,6 +176,11 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/httpd"
     version = "0.7.3"
+
+  [[order.group]]
+    id = "paketo-buildpacks/procfile"
+    optional = true
+    version = "5.6.0"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
