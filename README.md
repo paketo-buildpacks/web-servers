@@ -30,5 +30,6 @@ This buildpack also includes the following utility buildpacks:
 - [Image Labels CNB](https://github.com/paketo-buildpacks/image-labels)
 - [CA Certificates CNB](https://github.com/paketo-buildpacks/ca-certificates)
 - [Node Run Script CNB](https://github.com/paketo-buildpacks/node-run-script)
+- [Source Removal CNB](https://github.com/paketo-buildpacks/source-removal)
 
 Check out the [Web Servers Paketo Buildpack docs](https://paketo.io/docs/howto/web-servers/) for more information.

@@ -59,6 +59,10 @@ api = "0.7"
     optional = true
     version = "4.4.1"
 
+  [[order.group]]
+    id = "paketo-buildpacks/source-removal"
+    version = "0.2.0"
+
 [[order]]
 
   [[order.group]]
@@ -101,6 +105,10 @@ api = "0.7"
     id = "paketo-buildpacks/image-labels"
     optional = true
     version = "4.4.1"
+
+  [[order.group]]
+    id = "paketo-buildpacks/source-removal"
+    version = "0.2.0"
 
 [[order]]
 
@@ -149,6 +157,10 @@ api = "0.7"
     optional = true
     version = "4.4.1"
 
+  [[order.group]]
+    id = "paketo-buildpacks/source-removal"
+    version = "0.2.0"
+
 [[order]]
 
   [[order.group]]
@@ -192,6 +204,10 @@ api = "0.7"
     optional = true
     version = "4.4.1"
 
+  [[order.group]]
+    id = "paketo-buildpacks/source-removal"
+    version = "0.2.0"
+
 [[order]]
 
   [[order.group]]
@@ -223,6 +239,10 @@ api = "0.7"
     optional = true
     version = "4.4.1"
 
+  [[order.group]]
+    id = "paketo-buildpacks/source-removal"
+    version = "0.2.0"
+
 [[order]]
 
   [[order.group]]
@@ -253,3 +273,7 @@ api = "0.7"
     id = "paketo-buildpacks/image-labels"
     optional = true
     version = "4.4.1"
+
+  [[order.group]]
+    id = "paketo-buildpacks/source-removal"
+    version = "0.2.0"
