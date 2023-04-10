@@ -10,6 +10,7 @@ import (
 	"github.com/sclevine/spec/report"
 
 	. "github.com/onsi/gomega"
+	"github.com/onsi/gomega/format"
 )
 
 var webServersBuildpack string
@@ -25,10 +26,13 @@ func TestIntegration(t *testing.T) {
 
 	SetDefaultEventuallyTimeout(10 * time.Second)
 
+	format.MaxLength = 0
+
 	suite := spec.New("Integration", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("HTTPD", testHttpd)
 	suite("NGINX", testNginx)
 	suite("NPM Frontend", testNPMFrontend)
 	suite("Yarn Frontend", testYarnFrontend)
+	suite("Source Removal", testSourceRemoval)
 	suite.Run(t)
 }
