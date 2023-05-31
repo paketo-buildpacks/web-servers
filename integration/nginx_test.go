@@ -67,6 +67,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 				WithPullPolicy("never").
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), logs.String())
+			fmt.Println(logs.String())
 
 			Expect(logs).To(ContainLines(ContainSubstring("Buildpack for Nginx Server")))
 
