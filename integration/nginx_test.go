@@ -60,7 +60,10 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 			var err error
 			var logs fmt.Stringer
 			image, logs, err = pack.WithNoColor().Build.
-				WithBuildpacks(webServersBuildpack).
+				WithBuildpacks(
+					webServersBuildpack,
+					filepath.Join("testdata", "user-permissions"),
+				).
 				WithPullPolicy("never").
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), logs.String())
