@@ -56,7 +56,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 			Expect(os.RemoveAll(source)).To(Succeed())
 		})
 
-		it("creates a working OCI image", func() {
+		it.Focus("creates a working OCI image", func() {
 			var err error
 			var logs fmt.Stringer
 			image, logs, err = pack.WithNoColor().Build.
