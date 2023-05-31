@@ -48,7 +48,7 @@ jobs:
     - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* || true
 
     - name: Run Integration Tests
-      run: ./scripts/integration.sh --builder ${{ matrix.builder }}
+      run: ./scripts/integration.sh --builder ${{ matrix.builder }} --token ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
 
   roundup:
     name: Integration Tests

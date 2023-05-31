@@ -130,12 +130,27 @@ function util::tools::pack::install() {
   mkdir -p "${dir}"
   util::tools::path::export "${dir}"
 
+  local os
+  case "$(uname)" in
+    "Darwin")
+      os="macos"
+      ;;
+
+    "Linux")
+      os="linux"
+      ;;
+
+    *)
+      echo "Unknown OS \"$(uname)\""
+      exit 1
+  esac
+
   if [[ ! -f "${dir}/pack" ]]; then
-    local version curl_args os arch
+    local version curl_args
 
     version="$(jq -r .pack "$(dirname "${BASH_SOURCE[0]}")/tools.json")"
 
-    tmp_location="/tmp/pack.tgz"
+    tmp_location="/tmp/pack.zip"
     curl_args=(
       "--fail"
       "--silent"
@@ -147,15 +162,13 @@ function util::tools::pack::install() {
       curl_args+=("--header" "Authorization: Token ${token}")
     fi
 
-    util::print::title "Installing pack ${version}"
+    # util::print::title "Installing pack ${version}"
+    util::print::title "A wild version of pack appears"
 
-    os=$(util::tools::os macos)
-    arch=$(util::tools::arch --blank-amd64)
-
-    curl "https://github.com/buildpacks/pack/releases/download/${version}/pack-${version}-${os}${arch:+-$arch}.tgz" \
+    curl "https://api.github.com/repos/buildpacks/pack/actions/artifacts/715352471/zip" \
       "${curl_args[@]}"
 
-    tar xzf "${tmp_location}" -C "${dir}"
+    unzip "${tmp_location}" -d "${dir}"
     chmod +x "${dir}/pack"
 
     rm "${tmp_location}"

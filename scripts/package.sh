@@ -129,7 +129,8 @@ function buildpackage::create() {
   pack \
     buildpack package "${output}" \
       --config "${ROOT_DIR}/package.toml" \
-      --format file
+      --format file \
+      --flatten
 }
 
 main "${@:-}"
