@@ -59,7 +59,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 		it.Focus("creates a working OCI image", func() {
 			var err error
 			var logs fmt.Stringer
-			image, logs, err = pack.WithNoColor().Build.
+			image, logs, err = pack.WithNoColor().WithVerbose().Build.
 				WithBuildpacks(
 					webServersBuildpack,
 					filepath.Join("testdata", "user-permissions"),
