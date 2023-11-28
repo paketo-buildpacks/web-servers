@@ -10,11 +10,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/paketo-buildpacks/occam"
-	"github.com/sclevine/spec"
-
 	. "github.com/onsi/gomega"
+	"github.com/paketo-buildpacks/occam"
 	. "github.com/paketo-buildpacks/occam/matchers"
+	"github.com/sclevine/spec"
 )
 
 func testNginx(t *testing.T, context spec.G, it spec.S) {
@@ -201,6 +200,37 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 				content, err := ioutil.ReadAll(response.Body)
 				Expect(err).NotTo(HaveOccurred())
 				Expect(string(content)).To(ContainSubstring("<body>Hello World!</body>"))
+			})
+		})
+
+		context("reloading when BP_LIVE_RELOAD=false", func() {
+			it("creates a working OCI image that reloads content", func() {
+				var err error
+				var logs fmt.Stringer
+				image, logs, err = pack.WithNoColor().Build.
+					WithBuildpacks(webServersBuildpack).
+					WithPullPolicy("never").
+					WithEnv(map[string]string{
+						"BP_LIVE_RELOAD_ENABLED": "false",
+					}).
+					Execute(name, source)
+				Expect(err).NotTo(HaveOccurred(), logs.String())
+
+				Expect(logs).To(ContainLines(ContainSubstring("Nginx Server Buildpack")))
+				Expect(logs).NotTo(ContainLines(ContainSubstring("HTTP Server Buildpack")))
+				Expect(logs).NotTo(ContainLines(ContainSubstring("Watchexec Buildpack")))
+
+				container, err = docker.Container.Run.
+					WithEnv(map[string]string{"PORT": "8080"}).
+					WithPublish("8080").
+					Execute(image.ID)
+				Expect(err).NotTo(HaveOccurred())
+				Eventually(container).Should(Serve(ContainSubstring("<body>Hello World!</body>")).OnPort(8080).WithEndpoint("/index.html"))
+
+				err = docker.Container.Exec.ExecuteBash(container.ID, "sed -i 's/Hello World/Hello Reloaded World/g' /workspace/public/index.html")
+				Expect(err).NotTo(HaveOccurred())
+
+				Eventually(container).Should(Serve(ContainSubstring("<body>Hello Reloaded World!</body>")).OnPort(8080).WithEndpoint("/index.html"))
 			})
 		})
 	})
