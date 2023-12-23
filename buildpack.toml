@@ -17,12 +17,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.6.6"
+    version = "3.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.8.6"
+    version = "2.8.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -47,7 +47,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.6.7"
+    version = "5.6.8"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -68,12 +68,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.6.6"
+    version = "3.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.8.6"
+    version = "2.8.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -94,7 +94,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.6.7"
+    version = "5.6.8"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -115,12 +115,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.6.6"
+    version = "3.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.8.6"
+    version = "2.8.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -145,7 +145,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.6.7"
+    version = "5.6.8"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -166,12 +166,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.6.6"
+    version = "3.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.8.6"
+    version = "2.8.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -192,7 +192,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.6.7"
+    version = "5.6.8"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -213,12 +213,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.6.6"
+    version = "3.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.8.6"
+    version = "2.8.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -227,7 +227,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.6.7"
+    version = "5.6.8"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
@@ -248,12 +248,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.6.6"
+    version = "3.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "2.8.6"
+    version = "2.8.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -262,7 +262,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.6.7"
+    version = "5.6.8"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
