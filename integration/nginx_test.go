@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -135,7 +135,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 				source, err = occam.Source(filepath.Join("testdata", "ca_cert_apps"))
 				Expect(err).NotTo(HaveOccurred())
 
-				caCert, err := ioutil.ReadFile(filepath.Join(source, "client_certs", "ca.pem"))
+				caCert, err := os.ReadFile(filepath.Join(source, "client_certs", "ca.pem"))
 				Expect(err).ToNot(HaveOccurred())
 
 				caCertPool := x509.NewCertPool()
@@ -198,7 +198,7 @@ func testNginx(t *testing.T, context spec.G, it spec.S) {
 
 				Expect(response.StatusCode).To(Equal(http.StatusOK))
 
-				content, err := ioutil.ReadAll(response.Body)
+				content, err := io.ReadAll(response.Body)
 				Expect(err).NotTo(HaveOccurred())
 				Expect(string(content)).To(ContainSubstring("<body>Hello World!</body>"))
 			})
