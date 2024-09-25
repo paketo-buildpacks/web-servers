@@ -6,7 +6,7 @@
   uri = "urn:cnb:registry:paketo-buildpacks/node-engine@4.1.12"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@1.0.29"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@1.0.30"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/npm-install@1.5.0"
@@ -39,4 +39,4 @@
   uri = "urn:cnb:registry:paketo-buildpacks/ca-certificates@3.8.6"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.15"
+  uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.16"
