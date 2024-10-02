@@ -6,7 +6,7 @@
   uri = "urn:cnb:registry:paketo-buildpacks/node-engine@4.1.12"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@1.0.30"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@1.0.31"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/npm-install@1.5.0"
