@@ -3,10 +3,10 @@
   uri = "build/buildpack.tgz"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@4.1.15"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@5.0.0"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@1.0.35"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@1.0.36"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/npm-install@1.6.1"
