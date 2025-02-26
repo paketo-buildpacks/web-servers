@@ -42,7 +42,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.17.20"
+    version = "0.17.21"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -61,7 +61,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "0.2.33"
+    version = "0.2.34"
 
 [[order]]
 
@@ -89,7 +89,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.17.20"
+    version = "0.17.21"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -108,7 +108,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "0.2.33"
+    version = "0.2.34"
 
 [[order]]
 
@@ -140,7 +140,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.7.44"
+    version = "0.7.45"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -159,7 +159,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "0.2.33"
+    version = "0.2.34"
 
 [[order]]
 
@@ -187,7 +187,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.7.44"
+    version = "0.7.45"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -206,7 +206,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "0.2.33"
+    version = "0.2.34"
 
 [[order]]
 
@@ -222,7 +222,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.17.20"
+    version = "0.17.21"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -241,7 +241,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "0.2.33"
+    version = "0.2.34"
 
 [[order]]
 
@@ -257,7 +257,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.7.44"
+    version = "0.7.45"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -276,4 +276,4 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "0.2.33"
+    version = "0.2.34"
