@@ -24,19 +24,19 @@
   uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@2.1.12"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/procfile@5.10.2"
+  uri = "urn:cnb:registry:paketo-buildpacks/procfile@5.10.3"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/environment-variables@4.8.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/environment-variables@4.8.1"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/image-labels@4.8.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/image-labels@4.8.1"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/watchexec@3.4.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/watchexec@3.4.1"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/ca-certificates@3.9.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/ca-certificates@3.9.1"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.34"
