@@ -39,4 +39,4 @@
   uri = "urn:cnb:registry:paketo-buildpacks/ca-certificates@3.10.1"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.45"
+  uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.46"
