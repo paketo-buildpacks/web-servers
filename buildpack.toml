@@ -38,7 +38,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.1.3"
+    version = "2.1.4"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -85,7 +85,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.1.3"
+    version = "2.1.4"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -136,7 +136,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.1.3"
+    version = "2.1.4"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -183,7 +183,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.1.3"
+    version = "2.1.4"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
