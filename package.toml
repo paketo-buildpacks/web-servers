@@ -3,13 +3,13 @@
   uri = "build/buildpack.tgz"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@5.7.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@6.0.0"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@2.1.6"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@2.1.7"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/npm-install@1.9.4"
+  uri = "urn:cnb:registry:paketo-buildpacks/npm-install@2.0.0"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/httpd@0.7.54"
@@ -18,10 +18,10 @@
   uri = "urn:cnb:registry:paketo-buildpacks/nginx@0.17.30"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn@1.4.4"
+  uri = "urn:cnb:registry:paketo-buildpacks/yarn@2.0.0"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@2.2.4"
+  uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@2.2.5"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/procfile@5.11.1"
@@ -39,4 +39,4 @@
   uri = "urn:cnb:registry:paketo-buildpacks/ca-certificates@3.10.2"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.48"
+  uri = "urn:cnb:registry:paketo-buildpacks/source-removal@0.2.49"
