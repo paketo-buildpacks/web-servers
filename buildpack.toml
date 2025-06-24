@@ -22,7 +22,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "3.5.2"
+    version = "3.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -47,17 +47,17 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.11.1"
+    version = "5.11.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.9.1"
+    version = "4.9.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.10.0"
+    version = "4.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
@@ -73,7 +73,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "3.5.2"
+    version = "3.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -94,17 +94,17 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.11.1"
+    version = "5.11.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.9.1"
+    version = "4.9.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.10.0"
+    version = "4.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
@@ -120,7 +120,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "3.5.2"
+    version = "3.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -145,17 +145,17 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.11.1"
+    version = "5.11.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.9.1"
+    version = "4.9.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.10.0"
+    version = "4.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
@@ -171,7 +171,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "3.5.2"
+    version = "3.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
@@ -192,17 +192,17 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.11.1"
+    version = "5.11.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.9.1"
+    version = "4.9.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.10.0"
+    version = "4.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
@@ -218,7 +218,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "3.5.2"
+    version = "3.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -227,17 +227,17 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.11.1"
+    version = "5.11.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.9.1"
+    version = "4.9.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.10.0"
+    version = "4.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
@@ -253,7 +253,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/watchexec"
     optional = true
-    version = "3.5.2"
+    version = "3.5.3"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -262,17 +262,17 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.11.1"
+    version = "5.11.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.9.1"
+    version = "4.9.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.10.0"
+    version = "4.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
