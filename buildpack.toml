@@ -42,7 +42,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.17.31"
+    version = "0.17.32"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -89,7 +89,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.17.31"
+    version = "0.17.32"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -140,7 +140,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.7.54"
+    version = "0.7.55"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -187,7 +187,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.7.54"
+    version = "0.7.55"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -222,7 +222,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.17.31"
+    version = "0.17.32"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -257,7 +257,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "0.7.54"
+    version = "0.7.55"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
