@@ -3,7 +3,7 @@
   uri = "build/buildpack.tgz"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@7.2.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@7.2.1"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@2.1.12"
@@ -18,7 +18,7 @@
   uri = "urn:cnb:registry:paketo-buildpacks/nginx@0.17.36"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn@2.0.6"
+  uri = "urn:cnb:registry:paketo-buildpacks/yarn@2.0.7"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@2.3.2"
