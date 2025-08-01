@@ -12,10 +12,10 @@
   uri = "urn:cnb:registry:paketo-buildpacks/npm-install@2.1.0"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/httpd@0.7.60"
+  uri = "urn:cnb:registry:paketo-buildpacks/httpd@0.7.61"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/nginx@0.17.36"
+  uri = "urn:cnb:registry:paketo-buildpacks/nginx@0.17.37"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/yarn@2.0.7"
