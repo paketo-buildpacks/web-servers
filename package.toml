@@ -15,7 +15,7 @@
   uri = "urn:cnb:registry:paketo-buildpacks/httpd@0.7.72"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/nginx@0.18.9"
+  uri = "urn:cnb:registry:paketo-buildpacks/nginx@1.0.0"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/yarn@2.2.6"
