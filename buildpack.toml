@@ -42,7 +42,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.18.9"
+    version = "1.0.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -81,7 +81,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.1.0"
+    version = "2.2.0"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
@@ -89,7 +89,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.18.9"
+    version = "1.0.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -179,7 +179,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.1.0"
+    version = "2.2.0"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
@@ -222,7 +222,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "0.18.9"
+    version = "1.0.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
