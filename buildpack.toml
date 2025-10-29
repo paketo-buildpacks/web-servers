@@ -26,23 +26,23 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "7.10.0"
+    version = "7.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "2.2.6"
+    version = "2.2.7"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
-    version = "2.6.6"
+    version = "2.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.6"
+    version = "2.3.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "1.0.0"
+    version = "1.0.1"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -77,19 +77,19 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "7.10.0"
+    version = "7.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.2.0"
+    version = "2.2.1"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.6"
+    version = "2.3.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "1.0.0"
+    version = "1.0.1"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -124,19 +124,19 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "7.10.0"
+    version = "7.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "2.2.6"
+    version = "2.2.7"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
-    version = "2.6.6"
+    version = "2.6.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.6"
+    version = "2.3.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -175,15 +175,15 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "7.10.0"
+    version = "7.10.1"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.2.0"
+    version = "2.2.1"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.6"
+    version = "2.3.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -222,7 +222,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "1.0.0"
+    version = "1.0.1"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
