@@ -12,7 +12,7 @@
   uri = "urn:cnb:registry:paketo-buildpacks/npm-install@2.2.3"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/httpd@1.0.0"
+  uri = "urn:cnb:registry:paketo-buildpacks/httpd@1.0.1"
 
 [[dependencies]]
   uri = "urn:cnb:registry:paketo-buildpacks/nginx@1.0.3"
