@@ -10,7 +10,7 @@ api = "0.7"
     uri = "https://github.com/paketo-buildpacks/web-servers/blob/main/LICENSE"
 
 [metadata]
-  include-files = ["buildpack.toml"]
+  include-files = ["LICENSE", "README.md", "buildpack.toml"]
 
 [[order]]
 
