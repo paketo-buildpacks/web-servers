@@ -39,7 +39,7 @@
   uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.10.5"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/source-removal:0.2.68"
+  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.0"
 
 [[targets]]
   arch = "amd64"
