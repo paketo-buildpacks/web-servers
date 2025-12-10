@@ -201,7 +201,7 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 					response, err = client.Do(request)
 					return err
 				}).Should(BeNil())
-				defer response.Body.Close()
+				defer func() { Expect(response.Body.Close()).To(Succeed()) }()
 
 				Expect(response.StatusCode).To(Equal(http.StatusOK))
 
@@ -382,7 +382,7 @@ func testYarnFrontend(t *testing.T, context spec.G, it spec.S) {
 					response, err = client.Do(request)
 					return err
 				}).Should(BeNil())
-				defer response.Body.Close()
+				defer func() { Expect(response.Body.Close()).To(Succeed()) }()
 
 				Expect(response.StatusCode).To(Equal(http.StatusOK))
 
