@@ -6,7 +6,7 @@
   uri = "docker://docker.io/paketobuildpacks/node-engine:7.13.2"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.16"
+  uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.17"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/npm-install:2.2.8"
@@ -39,7 +39,7 @@
   uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.11.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.7"
+  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.8"
 
 [[targets]]
   arch = "amd64"
