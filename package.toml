@@ -3,43 +3,43 @@
   uri = "build/buildpack.tgz"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/node-engine:7.12.3"
+  uri = "docker://docker.io/paketobuildpacks/node-engine:8.0.2"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.13"
+  uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.19"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/npm-install:2.2.6"
+  uri = "docker://docker.io/paketobuildpacks/npm-install:2.3.2"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/httpd:1.0.2"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/nginx:1.0.6"
+  uri = "docker://docker.io/paketobuildpacks/nginx:1.0.11"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/yarn:2.2.13"
+  uri = "docker://docker.io/paketobuildpacks/yarn:2.2.18"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/yarn-install:2.6.13"
+  uri = "docker://docker.io/paketobuildpacks/yarn-install:2.7.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/procfile:5.11.4"
+  uri = "docker://docker.io/paketobuildpacks/procfile:5.12.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/environment-variables:4.9.4"
+  uri = "docker://docker.io/paketobuildpacks/environment-variables:4.10.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/image-labels:4.10.3"
+  uri = "docker://docker.io/paketobuildpacks/image-labels:4.11.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/watchexec:3.5.5"
+  uri = "docker://docker.io/paketobuildpacks/watchexec:3.6.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.10.5"
+  uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.11.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.4"
+  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.10"
 
 [[targets]]
   arch = "amd64"
