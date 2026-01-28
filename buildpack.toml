@@ -38,11 +38,11 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.19"
+    version = "2.3.20"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "1.0.11"
+    version = "1.0.12"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -61,7 +61,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.10"
+    version = "1.0.11"
 
 [[order]]
 
@@ -81,15 +81,15 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.3.2"
+    version = "2.3.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.19"
+    version = "2.3.20"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "1.0.11"
+    version = "1.0.12"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -108,7 +108,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.10"
+    version = "1.0.11"
 
 [[order]]
 
@@ -136,7 +136,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.19"
+    version = "2.3.20"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -159,7 +159,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.10"
+    version = "1.0.11"
 
 [[order]]
 
@@ -179,11 +179,11 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.3.2"
+    version = "2.3.3"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.19"
+    version = "2.3.20"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -206,7 +206,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.10"
+    version = "1.0.11"
 
 [[order]]
 
@@ -222,7 +222,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
-    version = "1.0.11"
+    version = "1.0.12"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -241,7 +241,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.10"
+    version = "1.0.11"
 
 [[order]]
 
@@ -276,4 +276,4 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.10"
+    version = "1.0.11"
