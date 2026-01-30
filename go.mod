@@ -3,7 +3,7 @@ module github.com/paketo-buildpacks/web-servers
 go 1.25.5
 
 require (
-	github.com/onsi/gomega v1.39.0
+	github.com/onsi/gomega v1.39.1
 	github.com/paketo-buildpacks/occam v0.31.1
 	github.com/sclevine/spec v1.4.0
 )
