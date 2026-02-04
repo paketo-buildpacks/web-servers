@@ -30,7 +30,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "2.2.18"
+    version = "2.2.19"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
@@ -38,7 +38,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.20"
+    version = "2.3.21"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -61,7 +61,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.11"
+    version = "1.0.12"
 
 [[order]]
 
@@ -81,11 +81,11 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.3.3"
+    version = "2.3.4"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.20"
+    version = "2.3.21"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -108,7 +108,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.11"
+    version = "1.0.12"
 
 [[order]]
 
@@ -128,7 +128,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "2.2.18"
+    version = "2.2.19"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
@@ -136,7 +136,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.20"
+    version = "2.3.21"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -159,7 +159,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.11"
+    version = "1.0.12"
 
 [[order]]
 
@@ -179,11 +179,11 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.3.3"
+    version = "2.3.4"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.20"
+    version = "2.3.21"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
@@ -206,7 +206,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.11"
+    version = "1.0.12"
 
 [[order]]
 
@@ -241,7 +241,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.11"
+    version = "1.0.12"
 
 [[order]]
 
@@ -276,4 +276,4 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.11"
+    version = "1.0.12"
