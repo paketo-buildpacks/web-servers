@@ -3,25 +3,25 @@
   uri = "build/buildpack.tgz"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/node-engine:8.1.0"
+  uri = "docker://docker.io/paketobuildpacks/node-engine:8.1.1"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.34"
+  uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.35"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/npm-install:2.3.17"
+  uri = "docker://docker.io/paketobuildpacks/npm-install:2.3.18"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/httpd:1.0.3"
+  uri = "docker://docker.io/paketobuildpacks/httpd:1.0.4"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/nginx:1.0.25"
+  uri = "docker://docker.io/paketobuildpacks/nginx:1.0.26"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/yarn:2.2.29"
+  uri = "docker://docker.io/paketobuildpacks/yarn:2.2.30"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/yarn-install:2.7.11"
+  uri = "docker://docker.io/paketobuildpacks/yarn-install:2.7.12"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.13.2"
@@ -39,7 +39,7 @@
   uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.12.2"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.24"
+  uri = "docker://docker.io/paketobuildpacks/source-removal:1.0.25"
 
 [[targets]]
   arch = "amd64"
