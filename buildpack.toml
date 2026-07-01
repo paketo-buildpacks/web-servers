@@ -26,19 +26,19 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "8.2.0"
+    version = "8.3.0"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "2.2.36"
+    version = "2.2.37"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
-    version = "2.7.18"
+    version = "2.7.19"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.41"
+    version = "2.3.42"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -61,7 +61,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.31"
+    version = "1.0.32"
 
 [[order]]
 
@@ -77,15 +77,15 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "8.2.0"
+    version = "8.3.0"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.3.23"
+    version = "2.3.24"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.41"
+    version = "2.3.42"
 
   [[order.group]]
     id = "paketo-buildpacks/nginx"
@@ -108,7 +108,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.31"
+    version = "1.0.32"
 
 [[order]]
 
@@ -124,23 +124,23 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "8.2.0"
+    version = "8.3.0"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn"
-    version = "2.2.36"
+    version = "2.2.37"
 
   [[order.group]]
     id = "paketo-buildpacks/yarn-install"
-    version = "2.7.18"
+    version = "2.7.19"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.41"
+    version = "2.3.42"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "1.0.10"
+    version = "1.0.11"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -159,7 +159,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.31"
+    version = "1.0.32"
 
 [[order]]
 
@@ -175,19 +175,19 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/node-engine"
-    version = "8.2.0"
+    version = "8.3.0"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
-    version = "2.3.23"
+    version = "2.3.24"
 
   [[order.group]]
     id = "paketo-buildpacks/node-run-script"
-    version = "2.3.41"
+    version = "2.3.42"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "1.0.10"
+    version = "1.0.11"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -206,7 +206,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.31"
+    version = "1.0.32"
 
 [[order]]
 
@@ -241,7 +241,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.31"
+    version = "1.0.32"
 
 [[order]]
 
@@ -257,7 +257,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/httpd"
-    version = "1.0.10"
+    version = "1.0.11"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
@@ -276,4 +276,4 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/source-removal"
-    version = "1.0.31"
+    version = "1.0.32"
