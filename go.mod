@@ -1,6 +1,6 @@
 module github.com/paketo-buildpacks/web-servers
 
-go 1.26.5
+go 1.27.1
 
 require (
 	github.com/onsi/gomega v1.44.0
