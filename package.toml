@@ -9,7 +9,7 @@
   uri = "docker://docker.io/paketobuildpacks/node-run-script:2.3.59"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/npm-install:2.3.34"
+  uri = "docker://docker.io/paketobuildpacks/npm-install:2.3.35"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/httpd:1.1.10"
