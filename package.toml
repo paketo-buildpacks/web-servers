@@ -2,7 +2,7 @@
 uri = 'build/buildpack.tgz'
 
 [[dependencies]]
-uri = 'docker://docker.io/paketobuildpacks/node-engine:8.12.1'
+uri = 'docker://docker.io/paketobuildpacks/node-engine:8.12.2'
 
 [[dependencies]]
 uri = 'docker://docker.io/paketobuildpacks/node-run-script:2.3.61'
